@@ -1,0 +1,49 @@
+{
+    "users": [
+      {
+        "username": "maria12",
+        "name": "Maria",
+        "surname": "García",
+        "email": "maria@example.com",
+        "password": "mypass123",
+        "profilePicture": "uploads/woman.png"
+      },
+      {
+        "username": "john_doe",
+        "name": "John",
+        "surname": "Doe",
+        "email": "john@example.com",
+        "password": "secure1234",
+        "profilePicture": "uploads/man.png"
+      }
+    ],
+    "products": [
+      {
+        "productId": "prod-001",
+        "title": "Electric Guitar",
+        "description": "Yamaha Pacifica in great condition.",
+        "userId": 1,
+        "images": ["uploads/pencil1.jpg"],
+        "location": "Gràcia",
+        "category": "Music"
+      },
+      {
+        "productId": "prod-002",
+        "title": "Sofa",
+        "description": "Comfortable 3-seater sofa.",
+        "userId": 2,
+        "images": ["uploads/sopha.jpg"],
+        "location": "Eixample",
+        "category": "Furniture"
+      }
+    ],
+    "proposals": [
+      {
+        "initiatorId": 1,
+        "receiverId": 2,
+        "initiatorItems": ["prod-001"],
+        "receiverItems": ["prod-002"]
+      }
+    ]
+  }
+  

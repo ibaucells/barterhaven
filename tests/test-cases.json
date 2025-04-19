@@ -1,0 +1,76 @@
+[
+  {
+    "description": "Register a new user successfully",
+    "method": "POST",
+    "endpoint": "/users/register",
+    "payload": {
+      "username": "maria12",
+      "name": "Maria",
+      "surname": "García",
+      "email": "maria@example.com",
+      "password": "mypass123"
+    },
+    "expectedStatus": 201
+  },
+  {
+    "description": "Login with correct credentials",
+    "method": "POST",
+    "endpoint": "/users/login",
+    "payload": {
+      "email": "maria@example.com",
+      "password": "mypass123"
+    },
+    "expectedStatus": 200
+  },
+  {
+    "description": "Fail to register duplicate user",
+    "method": "POST",
+    "endpoint": "/users/register",
+    "payload": {
+      "username": "maria12",
+      "name": "Maria",
+      "surname": "García",
+      "email": "maria@example.com",
+      "password": "anotherpass"
+    },
+    "expectedStatus": 409
+  },
+  {
+    "description": "Add a new product",
+    "method": "POST",
+    "endpoint": "/products",
+    "payload": {
+      "productId": "prod-001",
+      "title": "Standard pencil",
+      "description": "Common pencil in great condition.",
+      "userId": 1,
+      "images": ["uploads/pencil1.jpg"],
+      "location": "Gràcia",
+      "category": "Furniture",
+      "state": "active"
+    },
+    "expectedStatus": 201
+  },
+  {
+    "description": "Update liked products (add)",
+    "method": "PATCH",
+    "endpoint": "/users/update/0",
+    "payload": {
+      "likedProducts": "prod-001",
+      "action": "add"
+    },
+    "expectedStatus": 200
+  },
+  {
+    "description": "Create exchange proposal",
+    "method": "POST",
+    "endpoint": "/proposals",
+    "payload": {
+      "initiatorId": 1,
+      "receiverId": 2,
+      "initiatorItems": ["prod-001"],
+      "receiverItems": ["prod-002"]
+    },
+    "expectedStatus": 201
+  }
+]

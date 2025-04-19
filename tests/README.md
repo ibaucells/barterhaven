@@ -1,0 +1,1 @@
+To run the authomatic tests, connect to the server (`node backend/server.js`) and do `node run-tests.cjs` within the folder 'tests'.
