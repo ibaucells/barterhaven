@@ -15,7 +15,7 @@ app.use(cors());
 app.use(express.json());
 
 // Database connection
-const dbURI = 'mongodb+srv://barteruser:barteruserpass@cluster0.nnp44.mongodb.net/';
+// const dbURI = // TODO
 
 // Define __dirname manually for ES modules
 const __filename = fileURLToPath(import.meta.url);
