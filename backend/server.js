@@ -1,11 +1,11 @@
 import express from "express";
 import cors from "cors";
 import multer from "multer";
-import bcrypt from "bcrypt";
 import path from "path";
 import mongoose from "mongoose";
 import fs from "fs";
 import { fileURLToPath } from "url";
+
 
 const app = express();
 const PORT = 5000; // Define the PORT variable
@@ -15,7 +15,8 @@ app.use(cors());
 app.use(express.json());
 
 // Database connection
-// const dbURI = // TODO
+const dbURI = "mongodb://127.0.0.1:27017/barterhaven";
+console.log('dbURI:', dbURI);
 
 // Define __dirname manually for ES modules
 const __filename = fileURLToPath(import.meta.url);
